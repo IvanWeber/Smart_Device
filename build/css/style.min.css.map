@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AACE,e,CACE,S,CAEF,Y,CACE,W","file":"style.min.css","sourcesContent":["header {\n  &__heading {\n    color: red;\n  }\n  &__logo {\n    color: green;\n  }\n}\n"]}
