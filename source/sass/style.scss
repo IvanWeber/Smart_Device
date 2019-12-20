@@ -30,6 +30,8 @@ $top-background-pic: '../img/top-background.png';
 
 $min-content-width: 1430px;
 
+$button-border-radius: 5px;
+
 $logo-padding-top: 33px;
 $logo-padding-left: 16px;
 
@@ -61,7 +63,7 @@ body {
 }
 
 .top-background  {
-  background: url($top-background-pic) #1B2931;
+  background: url(../img/top-pcb.svg) 1038px 258px no-repeat, url($top-background-pic) #1B2931;
 }
 
 .container {
@@ -145,6 +147,61 @@ body {
     text-transform: uppercase;
     padding: 13px 26px 13px 26px;
     border-radius: 5px;
+  }
+}
+
+/* advertising */
+
+.advertising {
+  min-height: 756px;
+  position: relative;
+
+  &__pcb {
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+    padding: 193px 0 0 13px;
+  }
+
+  &__pcb-info {
+    font-size: 22px;
+    line-height: 34px;
+    color: #ffffff;
+    margin: 0;
+    padding: 27px 0 0 110px;
+    position: relative;
+  }
+
+  &__pcb-info:before {
+    content: url('../img/top-bullet.svg');
+    position: absolute;
+    top: 22px;
+    left: 16px;
+  }
+
+  &__get-free-cons {
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #00B2FF;
+    min-width: 407px;
+    margin-top: 44px;
+    margin-left: 110px;
+    padding: 18px 0 18px 0;
+    border-radius: $button-border-radius;
+    display: inline-block;
   }
 }
 
