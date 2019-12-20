@@ -1,8 +1,180 @@
-header {
-  &__heading {
-    color: red;
-  }
+/* pt-mono-regular - latin_cyrillic */
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/pt-mono-v7-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/pt-mono-v7-latin_cyrillic-regular.woff') format('woff'); /* Modern Browsers */
+}
+
+/* roboto-condensed-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-condensed-v18-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/roboto-condensed-v18-latin_cyrillic-regular.woff') format('woff'); /* Modern Browsers */
+}
+
+/* roboto-condensed-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-condensed-v18-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/roboto-condensed-v18-latin_cyrillic-700.woff') format('woff'); /* Modern Browsers */
+}
+
+/* Общие стили, которые влияют и на десктопные разрешения */
+$top-background-pic: '../img/top-background.png';
+
+$min-content-width: 1430px;
+
+$logo-padding-top: 33px;
+$logo-padding-left: 16px;
+
+$menu-padding-top: 52px;
+$menu-padding-left: 119px;
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: $min-content-width;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Mono", Arial, sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.top-background  {
+  background: url($top-background-pic) #1B2931;
+}
+
+.container {
+  width: $min-content-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.header {
+  display: flex;
+  min-height: 122px;
+
   &__logo {
-    color: green;
+    padding-top: $logo-padding-top;
+    padding-left: $logo-padding-left;
+  }
+
+  &__menu {
+    padding-top: $menu-padding-top;
+    padding-left: $menu-padding-left;
+  }
+
+  &__menu:before {
+    content: url('../img/top-menu.svg');
   }
 }
+
+.logo {
+  &__link:before {
+    content: url('../img/top-logo.svg');
+  }
+}
+
+.email {
+  padding-top: 50px;
+  padding-left: 415px;
+
+  &__link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  &__link:before {
+    content: url('../img/email-icon.svg');
+    position: relative;
+    top: 2px;
+    right: 20px;
+  }
+}
+
+.phone {
+  padding-top: 46px;
+  padding-left: 104px;
+
+  &__link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  &__link:before {
+    content: url('../img/phone-icon.svg');
+    position: relative;
+    top: 4px;
+    right: 16px;
+  }
+}
+
+.call-order {
+  padding-top: 50px;
+  padding-left: 50px;
+  &__link {
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 26px 13px 26px;
+    border-radius: 5px;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Стили, влияющие на экраны ДО 1023px (Планшет) */
+  .header {
+    display: flex;
+
+    &__logo {
+      padding-top: $logo-padding-top;
+      padding-left: $logo-padding-left;
+    }
+
+    &__logo:before {
+      content: url('../img/top-logo_tablet.svg');
+    }
+
+    &__menu {
+      padding-top: $menu-padding-top;
+      padding-left: $menu-padding-left;
+    }
+
+    &__menu:before {
+      content: url('../img/top-menu.svg');
+    }
+  }
+}
+
+@media (max-width: 767px) {
+    /* Стили, влияющие на экраны ДО 767px (Мобильные) */
+}
+
