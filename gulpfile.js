@@ -17,7 +17,7 @@ var include = require("posthtml-include");
 var del = require("del");
 
 gulp.task("css", function () {
-  return gulp.src("source/sass/style.scss")
+  return gulp.src("source/css/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -38,7 +38,7 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+  gulp.watch("source/css/**/*.{scss,css}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
