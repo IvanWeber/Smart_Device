@@ -24,8 +24,30 @@
   /* Modern Browsers */
 }
 /* Общие стили, которые влияют и на десктопные разрешения */
-html {
-  box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  background-color: black;
+  min-height: 317px;
+  flex: 0 0 auto;
 }
 
 body {
@@ -46,16 +68,17 @@ body {
   overflow: hidden;
 }
 
-.top-background {
-  background: url(../img/top-pcb.svg) 1038px 258px no-repeat, url("../img/top-background.png") #1B2931;
-}
-
 .container {
   width: 1430px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.top-background {
+  background: url(../img/top-pcb.svg) calc(50% + 439px) 258px no-repeat, url("../img/top-background.png") #1B2931;
+}
+
+/* header */
 .header {
   display: flex;
   min-height: 122px;
@@ -174,6 +197,7 @@ body {
   display: inline-block;
 }
 
+/* footer */
 @media (max-width: 1023px) {
   /* Стили, влияющие на экраны ДО 1023px (Планшет) */
   .header {
