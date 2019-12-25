@@ -43,6 +43,13 @@ $menu-padding-left: 119px;
 html,
 body {
   height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
 .wrapper {
@@ -378,6 +385,175 @@ body {
     color: #1b2d37;
   }
 }
+
+/* about */
+
+.about {
+  background: url("../img/Polygon.svg") 201px 46px no-repeat, url("../img/Polygon-1.svg") 1555px 397px no-repeat, url("../img/Group.svg") 0 444px no-repeat, url("../img/Group-1.svg") 559px 147px no-repeat;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 82px;
+  padding-left: 129px;
+
+  &__feature {
+    position: relative;
+    margin-top: 30px;
+    margin-right: 30px;
+    width: 571px;
+    min-height: 299px;
+    border-top: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    border-left: 3px solid #00b2ff;
+    padding-top: 93px;
+    padding-left: 42px;
+    background-color: #ffffff;
+  }
+
+  &__feature:hover {
+    cursor: pointer;
+    background-color: #00b2ff;
+    color: #ffffff;
+  }
+
+  &__feature:hover .feature__heading {
+    color: #ffffff;
+  }
+}
+
+.feature {
+  &__heading {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 34px;
+    color: #00b2ff;
+  }
+
+  &__par {
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 18px;
+    padding-right: 40px;
+    letter-spacing: 0.0001em;
+  }
+}
+
+.feature_deadlines::before {
+  content: url("../img/stopwatch.svg");
+  color: red;
+  position: absolute;
+  top: 39px;
+  left: 42px;
+}
+
+.feature_suppliers::before {
+  content: url("../img/hired.svg");
+  position: absolute;
+  top: 39px;
+  left: 42px;
+}
+
+.feature_confidentiality::before {
+  content: url("../img/detective.svg");
+  position: absolute;
+  top: 39px;
+  left: 42px;
+}
+
+.feature_personalization::before {
+  content: url("../img/tag.svg");
+  position: absolute;
+  top: 39px;
+  left: 42px;
+}
+
+.feature_deadlines:hover::before {
+  content: url("../img/stopwatch-hover.svg");
+  color: red;
+  position: absolute;
+  top: 39px;
+  left: 42px;
+}
+
+.feature_suppliers:hover::before {
+  content: url("../img/hired-hover.svg");
+  position: absolute;
+  top: 39px;
+  left: 42px;
+}
+
+.feature_confidentiality:hover::before {
+  content: url("../img/detective-hover.svg");
+  position: absolute;
+  top: 39px;
+  left: 42px;
+}
+
+.feature_personalization:hover::before {
+  content: url("../img/tag-hover.svg");
+  position: absolute;
+  top: 39px;
+  left: 42px;
+}
+
+.general {
+  padding-top: 105px;
+  padding-left: 310px;
+  padding-bottom: 110px;
+  position: relative;
+
+  &__heading {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+    color: #666666;
+    margin-bottom: 23px;
+  }
+
+  &__par {
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.0001em;
+    padding-right: 140px;
+
+    &_2 {
+      padding-top: 22px;
+    }
+  }
+}
+
+.general::before {
+  content: url("../img/2005.png");
+  position: absolute;
+  top: 110px;
+  left: 100px;
+}
+
+.general__button-details {
+  display: inline-block;
+  text-decoration: none;
+  color: #00b2ff;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid #00b2ff;
+  padding: 14px 50px 14px 50px;
+  border-radius: 5px;
+  margin-top: 41px;
+  margin-left: -1px;
+}
+
 
 @media (max-width: 1023px) {
   /* Стили, влияющие на экраны ДО 1023px (Планшет) */
