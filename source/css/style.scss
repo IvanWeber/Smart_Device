@@ -389,7 +389,7 @@ body {
 /* about */
 
 .about {
-  background: url("../img/Polygon.svg") 201px 46px no-repeat, url("../img/Polygon-1.svg") 1555px 397px no-repeat, url("../img/Group.svg") 0 444px no-repeat, url("../img/Group-1.svg") 559px 147px no-repeat;
+  background: url("../img/Polygon.svg") 299px 46px no-repeat, url("../img/Polygon-1.svg") 1654px 397px no-repeat, url("../img/Group.svg") 98px 444px no-repeat, url("../img/Group-1.svg") 657px 147px no-repeat;
 }
 
 .features {
@@ -504,7 +504,7 @@ body {
 .general {
   padding-top: 105px;
   padding-left: 310px;
-  padding-bottom: 110px;
+  padding-bottom: 109px;
   position: relative;
 
   &__heading {
@@ -524,7 +524,7 @@ body {
     padding-right: 140px;
 
     &_2 {
-      padding-top: 22px;
+      padding-top: 19px;
     }
   }
 }
@@ -550,10 +550,79 @@ body {
   border: 1px solid #00b2ff;
   padding: 14px 50px 14px 50px;
   border-radius: 5px;
-  margin-top: 41px;
+  margin-top: 38px;
   margin-left: -1px;
 }
 
+/* services */
+
+.services {
+  background-color: #1b2d37;
+  padding-bottom: 127px;
+
+  &__services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 130px;
+  }
+
+  &__main-par {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-size: 36px;
+    line-height: 51px;
+    color: #ffffff;
+    width: 100%;
+    margin-top: 88px;
+  }
+
+  &__service {
+    width: 370px;
+    height: 620px;
+    position: relative;
+    margin-top: 52px;
+    margin-right: 30px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+
+    &_pcb-production {
+      background: url("../img/pcb-production.png");
+    }
+
+    &_pcb-installation {
+      background: url("../img/pcb-installation.png");
+    }
+
+    &_lighting-components {
+      background: url("../img/lighting-components.png");
+    }
+  }
+
+  &__service-par {
+    display: inline-block;
+    width: 160px;
+    margin-top: 50px;
+    margin-left: 44px;
+  }
+
+  &__service-arrow {
+    position: absolute;
+    left: 307px;
+    top: 557px;
+    display: inline-block;
+    width: 63px;
+    height: 63px;
+    background-color: #00b2ff;
+  }
+
+  &__service-arrow::before {
+    content: url("../img/arrow.svg");
+    position: absolute;
+    left: 31px;
+    top: 14px;
+  }
+}
 
 @media (max-width: 1023px) {
   /* Стили, влияющие на экраны ДО 1023px (Планшет) */
