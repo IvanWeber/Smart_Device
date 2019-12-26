@@ -235,7 +235,7 @@ body {
 
   &__logo {
     padding-top: 65px;
-    padding-left: 15px;
+    padding-left: 7px;
   }
 }
 
@@ -253,7 +253,7 @@ body {
   display: flex;
   list-style-type: none;
   margin-top: 49px;
-  margin-left: 14px;
+  margin-left: 7px;
 
   &__link {
     display: inline-block;
@@ -434,7 +434,6 @@ body {
   }
 
   &__par {
-    font-family: "PT Mono", "Arial", sans-serif;
     font-size: 16px;
     line-height: 22px;
     padding-top: 18px;
@@ -517,7 +516,6 @@ body {
   }
 
   &__par {
-    font-family: "PT Mono", "Arial", sans-serif;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.0001em;
@@ -621,6 +619,122 @@ body {
     position: absolute;
     left: 31px;
     top: 14px;
+  }
+}
+
+/* feedback */
+
+.feedback {
+  min-height: 670px;
+  background: url("../img/point.svg") 247px 94px no-repeat,url("../img/point.svg") 797px 94px no-repeat,url("../img/point.svg") 522px 570px no-repeat,url("../img/point.svg") 196px 293px no-repeat,url("../img/point.svg") 357px 571px no-repeat, url("../img/paper_airplane.svg") 350px 161px no-repeat, url("../img/feedback-polygon-1.svg") 251px 99px no-repeat, url("../img/feedback-polygon-2.svg") 199px 297px no-repeat, #00b2ff;
+
+  &__par-1 {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-size: 36px;
+    line-height: 51px;
+    color: #ffffff;
+  }
+
+  &__par-2 {
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-left: 4px;
+  }
+
+  &__consent-input-label {
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+  }
+
+  &__submit-button {
+    background-color: #00b2ff;
+    color: #ffffff;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 43px;
+    margin-left: 4px;
+    padding: 14px 80px 13px 78px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+  }
+}
+
+.input {
+  &_name {
+    margin-top: 51px;
+    margin-left: 4px;
+    padding: 12px 59px 16px 16px;
+  }
+
+  &_phone {
+    margin-top: 51px;
+    margin-left: 31px;
+    padding: 12px 57px 16px 17px;
+  }
+
+  &_question {
+    margin-top: 40px;
+    margin-left: 4px;
+    padding: 11px 359px 121px 16px;
+  }
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 91px;
+  padding-left: 726px;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  width: 300px;
+  margin-top: 48px;
+  margin-left: 70px;
+}
+
+.input_consent + .feedback__consent-input-label::before {
+  content: url("../img/checkbox-off.svg");
+  position: absolute;
+  top: 4px;
+  left: -32px;
+}
+
+.input_consent:checked + .feedback__consent-input-label::before {
+  content: url("../img/checkbox-on.svg");
+  position: absolute;
+  top: 4px;
+  left: -32px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__input {
+    background-color: #19baff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    border: 0;
+  }
+
+  &__input::placeholder {
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
   }
 }
 
